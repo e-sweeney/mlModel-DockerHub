@@ -7,5 +7,12 @@ jobs:
     echo:
         runs-on: self-hosted
         steps:
-            - name: Show the trigger 
-              run: echo "event"
+            - name: Checkout mlModel1
+              uses: actions/checkout@v6
+
+            - name: Run the Docker build
+              run: docker build -t first_run .
+            - name: Run the container image
+              run: |
+                docker run first_run
+                docker ps 
