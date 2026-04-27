@@ -20,7 +20,7 @@ jobs:
                 echo "this is from vscode"
             - name: build image
               run: |
-                sudo chmod 666 /var/run/docker.sock
+              
                 docker build . -t number1
             - name: docker run
               run: |
