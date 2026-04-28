@@ -32,8 +32,9 @@ jobs:
     
     - name: Cleanup MLFlow
       run: |
-        docker stop mlflow-server
-        docker rm mlflow-server
+        docker ps
+        #docker stop mlflow-server
+        #docker rm mlflow-server
        
       
           
