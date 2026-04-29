@@ -1,8 +1,8 @@
-FROM python:3.8
+FROM python:3.12
 EXPOSE 5001
 WORKDIR /opt/app
 COPY . /opt/app
-RUN pip3.8 install -r requirements.txt
-RUN python3.8 model.py
-CMD ["python3.8", "/opt/app/flaskApp.py"]
+RUN pip3.12 install -r requirements.txt
+RUN python3.12 model.py
+CMD ["python3.12", "/opt/app/flaskApp.py"]
 
