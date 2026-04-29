@@ -1,6 +1,6 @@
 name: PublishImage
 on:
-    #workflow_dispatch:  
+    workflow_dispatch:  
     #this will only run if Dockerfile changes after a push
     push:
         branches:
@@ -29,7 +29,7 @@ jobs:
             - name: build image
               run: 
                  
-                docker build . -t    /salarymodel:latest
+                docker build . -t  ${{secrets.DOCKER_HUB_USERNAME}}/salarymodel:latest
             - name: push image to docker hub
               run: |
-                docker push edwinasweeney/salarymodel:latest
+                docker push ${{secrets.DOCKER_HUB_USERNAME}}/salarymodel:latest
