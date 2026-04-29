@@ -7,13 +7,13 @@ jobs:
     echo:
         runs-on: self-hosted
         steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v4
+            
             - name: Run New Container
               run: |
                 docker pull edwinasweeney/salarymodel:latest
-               
-                
+                docker run -d --name salaryapp edwinasweeney/salarymodel:latest
+                docker ps
+                docker stop salaryapp
                
            
 
