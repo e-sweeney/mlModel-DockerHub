@@ -1,6 +1,6 @@
 name: PublishImage
 on:
-    workflow_dispatch:  
+    #workflow_dispatch:  
     #this will only run if Dockerfile changes after a push
     push:
         branches:

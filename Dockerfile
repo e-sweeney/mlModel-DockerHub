@@ -1,5 +1,5 @@
 FROM python:3.12
-EXPOSE 5000
+EXPOSE 5001
 WORKDIR /opt/app1
 COPY . /opt/app1
 RUN pip3.12 install -r requirements.txt
